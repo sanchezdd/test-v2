@@ -1,0 +1,40 @@
+.region-content {
+  display: flex;
+  flex-direction: row;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.column-left-sidebar {
+  background-color: #777777;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+.column-left-sidebar span {
+  color: #ffffff;
+}
+
+.column-left-sidebar h2 {
+  color: #ffffff;
+}
+
+.column-left-sidebar a {
+  color: #ffffff;
+}
+
+.column-left-sidebar .link {
+  text-align: right;
+}
+
+.column-middle {
+  padding: 20px;
+}
+
+.column-middle h2 {
+  color: #777777;
+}
+
+.column-middle p {
+  color: #777777;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/slider.css">
+  <link rel="stylesheet" type="text/css" href="css/content.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
+</head>
+<body>
+  <div class="region region-header">
+    <div class="header block-1">
+      <img src="img/1.jpeg" width="100%" height="100%" alt="image-1">
+      <span>
+        <h2>Название компании</h2>
+        <p>самая клевая компания</p>
+      </span>
+    </div>
+    <div class="header block-2">
+      <a class="phone" href="tel:+74997777777">+7 (499) 777-77-77</a>
+      <a class="phone" href="tel:+74997777777">+7 (499) 777-77-77</a>
+    </div>
+  </div>
+  <div class="region region-menu">
+    <div class="menu block-3">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Прайс-лист</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slider Structure -->
+  <div class="slideshow-container block-4">
+    <div class="mySlides fade">
+      <img src="img/slide-1.jpeg" style="width:100%" alt="slider-image">
+    </div>
+    <div class="mySlides fade">
+      <img src="img/slide-2.jpg" style="width:100%" alt="slider-image">
+    </div>
+    <div class="mySlides fade">
+      <img src="img/slide-3.jpg" style="width:100%" alt="slider-image">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <!-- Slider Init -->
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+
+  <div class="region region-content">
+    <div class="column column-left-sidebar">
+      <h2>Новости</h2>
+      <span>
+        <p class="date"><em>14 травня 2019</em></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="date"><em>14 травня 2019</em></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="date"><em>14 травня 2019</em></p>
+        <p>Lorem ipsum dolor sit amet, consectimagetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="date"><em>14 травня 2019</em></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="link"><a href="#">Архив новостей</a></p>
+      </span>
+    </div>
+    <div class="column column-middle">
+      <h2>Компания "Пиксель Плюс"</h2>
+      <span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </span>
+    </div>
+  </div>
+  <div class="region region-footer">
+    <div class="footer block-4">
+      <span>
+        <p>&copy; 2012-2013 ЗАО "Компания"</p>
+        <p>info@name.ru</p>
+      </span>
+    </div>
+    <div class="footer block-5">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Прайс-лист</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </div>
+    <div class="footer block-6">
+      <img src="img/1.jpeg" width="100%" height="100%" alt="block-6">
+      <span><a href="#">Розроботка сайта</a> - компания "Пиксель Плюс"</span>
+    </div>
+  </div>
+</body>
+</html>
